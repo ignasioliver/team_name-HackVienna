@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename='img/travelup.png') }}"/>
+<h1 class="title">
+    <i>Experience the unexperienced</i>
+</h1>
+
+<div><a href="{{circle}}">{{circle}}</a></div>
+<img src="{{ circle }}"/>
+<a class="button is-success" href="{{ url_for('nature') }}">Nature</a>
+<a class="button is-info" href="{{ url_for('city') }}">City</a>
+<a class="button is-dark" href="{{ url_for('allrandom') }}">Random</a>
+<a class="button is-white" href="{{ url_for('luxury') }}">Luxury</a>
+<br><br>
+
+<h2 class="subtitle">
+  Your Nature Experience
+</h2>
+
+<a href="{{ converted }}" download="natureExperience">
+    <img src="{{ converted }}" alt="Nature experience">
+</a>
+
+{% endblock %}

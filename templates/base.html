@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>team_name</title>
+    <link href="{{ url_for('static', filename='css/bulma.css') }}" rel="stylesheet">
+    <link href="{ url_for('static', filename='css/extrastyles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/modal-fx.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/modal-fx.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/background_image.css') }}" rel="stylesheet" >
+    <link href="{{ url_for('static', filename='css/lsd-roller.css') }}" rel="stylesheet" >
+    <script src="{{ url_for('static', filename='js/modal-fx.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modal-sfx.min.js') }}"></script>
+</head>
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    function hideButton() {
+        document.getElementById("roll").style.visibility = "visible";
+    }
+</script>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename='img/travelup.png') }}"/>
+
+<h1 class="title">
+    <i>Experience the unexperienced</i>
+</h1>
+
+<h2 class="subtitle">
+  We'll bring you to places you've never been
+</h2>
+
+<h3>
+    Start uploading a picture of yourself
+</h3>
+
+<form method=post enctype=multipart/form-data>
+      <input class="button is-info" type=file name=file>
+      <input class="button is-warning" type=submit value=Upload id="submitted" onclick="hideButton()">
+</form>
+
+<div class="wrapper" data-anim="base wrapper" id="circlegenerator" style="visibility: hidden">
+  <div class="circle" data-anim="base left"></div>
+  <div class="circle" data-anim="base right"></div>
+</div>
+
+<div id="roll" style="visibility: hidden">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+
+{% endblock %}
